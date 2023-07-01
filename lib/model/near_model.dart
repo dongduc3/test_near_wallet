@@ -40,10 +40,9 @@ class NearModel {
       };
 }
 
-List<NearModel> welcome4FromJson(String str) =>
-    List<NearModel>.from(json.decode(str).map((x) => NearModel.fromJson(x)));
+List<NearModel> nearFromJson(String str) => List<NearModel>.from(json.decode(str).map((x) => NearModel.fromJson(x)));
 
-String welcome4ToJson(List<NearModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String nearToJson(List<NearModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class PostType {
   PostType({
